@@ -13,6 +13,4 @@ export const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/gu, '
 // Sorts strings by length, so that longer ones are first
 // Also sorts alphabetically after sorting by length.
 export const sortByLengthDesc = (strings) =>
-  strings.sort((a, b) => {
-    return b.length - a.length || a.localeCompare(b);
-  });
+  strings.sort((a, b) => b.length - a.length || a.localeCompare(b));

@@ -16,7 +16,7 @@ export function createLineCommentRegex(lineCommentTypes) {
 
 export function createReservedWordRegex(reservedWords) {
   if (reservedWords.length === 0) {
-    return new RegExp(`^\b$`, 'u');
+    return /^\b$/u;
   }
   const reservedWordsPattern = sortByLengthDesc(reservedWords).join('|').replace(/ /gu, '\\s+');
   return new RegExp(`^(${reservedWordsPattern})\\b`, 'iu');
